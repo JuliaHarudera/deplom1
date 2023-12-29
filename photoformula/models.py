@@ -50,3 +50,11 @@ class Material(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Gallery(models.Model):
+    photo = models.ImageField(upload_to='photo/')
+    name = models.CharField(max_length=255, blank=True)
+
+
+
