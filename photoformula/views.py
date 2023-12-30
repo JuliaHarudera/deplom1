@@ -4,7 +4,7 @@ from .models import Course, Lesson, Instructor, Material
 
 
 def main(request):
-    category = Course.objects.filter(category=True
-                                     )
-    return render(request, 'index.html')
+    category_courses = Course.objects.filter(category=True)
+    context = {'category_courses': category_courses, }
+    return render(request, 'index.html', context)
 
